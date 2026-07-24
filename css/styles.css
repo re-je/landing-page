@@ -62,10 +62,6 @@ main {
 	letter-spacing: -0.02em;
 }
 
-.wordmark .dot {
-	color: var(--accent);
-}
-
 .strapline {
 	font-size: clamp(1.25rem, 3vw, 1.5rem);
 	max-width: 26ch;
