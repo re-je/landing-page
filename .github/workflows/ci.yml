@@ -15,7 +15,5 @@ jobs:
                   node-version: 24
             - name: Validate HTML
               run: npx --yes html-validate index.html
-            - name: Scan for secrets
-              uses: gitleaks/gitleaks-action@v2
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Run pre-commit hooks (includes gitleaks)
+              run: pipx run pre-commit run --all-files --show-diff-on-failure
